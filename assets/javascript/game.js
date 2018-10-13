@@ -68,7 +68,7 @@ $(".crystal-4").on("click" , function(){
 //lose IF player goes over chosen number 
       if(counter > randomNumber){
           console.log(loses)
-          $("#score").text("You Lose!")
+          $("#score").html("You Lose!")
           $("#loseResult").html("Lose: " + loses++)
           startGame()
          ;}}

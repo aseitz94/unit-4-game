@@ -1,13 +1,28 @@
 body{
-    background-image: url("/assets/images/52-simple-backgrounds-presentation-background-free-download-throughout-background-for-presentation-2-768x432.jpg");
+    background-image: url(http://websitepresentation.com/wp-content/uploads/52-simple-backgrounds-presentation-background-free-download-throughout-background-for-presentation-2.jpg);
 }
 
-
-.btn{
-    height: 100px;
-    width: 100px;
-    background-color: white;
+#random-number{
+    padding: 20px;
+    font-style: bold;
+    font-size: 40px;
+    background-color: #b7f7e0;
 }
 
-
-
+#score{
+    padding: 30;
+    font-style: bold;
+    font-size: 30px;
+    
+}
+ #winResult, #loseResult{
+     padding-top: 30px;
+     font-style: bold;
+     font-size: 25px;
+ }
+#counter-text, #counter-total{
+    font-size: 25px;
+    background-color: aqua;
+    width:100px;
+    height:100px;
+}
