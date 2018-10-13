@@ -5,14 +5,14 @@ var crystal2
 var crystal3
 var crystal4
 var counter = 0
-var playerScore
+var wins= 1
+var loses= 1
 
-
-
+function startGame(event){
 
 //generate random number between 19-120
 randomNumber = Math.floor(Math.random()* 102) + 19;
-$("#random-number").prepend(randomNumber)
+$("#random-number").html(randomNumber)
 
 //generate random number for each crystal between 1-12
 crystal1 =  Math.floor(Math.random()* 12) + 1,
@@ -24,40 +24,53 @@ console.log(crystal3),
 crystal4 =  Math.floor(Math.random()* 12) + 1,
 console.log(crystal4),
 
+counter = 0
+wins = 1
+loses = 1
+}
+startGame()
+
     //onclick crystals to add number to player's points
 $(".crystal-1").on("click" , function(){
     counter += crystal1;
-   $("#counter-total").append(counter);
+   $("#counter-total").html(counter);
+   scoreResult()
 })
 
 $(".crystal-2").on("click" , function(){
     counter += crystal2;
-   $("#counter-total").append(counter);
+   $("#counter-total").html(counter);
+   scoreResult()
 })
 
 $(".crystal-3").on("click" , function(){
     counter += crystal3;
-   $("#counter-total").append(counter);
+   $("#counter-total").html(counter);
+   scoreResult()
 })
 
 $(".crystal-4").on("click" , function(){
     counter += crystal4;
-   $("#counter-total").append(counter);
+   $("#counter-total").html(counter);
+   scoreResult()
 })
-  //hide values until crystals are clicked
+
 
 //win  IF player's score matches random chosen number
+    //call a function then put into click event
+        function scoreResult(){
+       if(counter === randomNumber){
+           $("#score").text("You Win!"),
+           $("#winResult").html ("Wins: " + wins++);
+           startGame()
+        }
        
-
 //lose IF player goes over chosen number 
+      if(counter > randomNumber){
+          console.log(loses)
+          $("#score").text("You Lose!")
+          $("#loseResult").html("Lose: " + loses++)
+          startGame()
+         ;}}
 
-//score is kept of the number of wins and loses
-
-//restart game when player wins or loses
-
-    //crystals have new hidden values
     
-
-    //new random number generated
-
-    //score counter sets back to 0
